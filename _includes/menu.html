@@ -1,0 +1,24 @@
+<!-- Header -->
+<header id="header" class="header navbar-black navbar-scrolltofixed bg-lighter">
+	<div class="header-nav">
+		<div class="header-nav-wrapper">
+			<div class="container">
+				<nav>
+					<div id="menuzord-right" class="menuzord default no-bg">
+						<a class="menuzord-brand pull-left flip font-great-vibes text-theme-colored font-32"
+							href="{{site.baseurl}}/{{site.basefolder}}/"><img
+								src="{{'/assets/fotos/logotipofonn.webp' | relative_url}}" alt="Finca la Peraleña"></a>
+						<ul class="menuzord-menu">
+							{% for menu in site.data.menu %}
+
+							<li {% if page.menu==menu.slug %} class="active" {% endif %}><a
+									href="{% link {{menu.file}} %}">{{menu.title}}</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>

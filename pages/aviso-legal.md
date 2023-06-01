@@ -1,0 +1,19 @@
+---
+permalink: /aviso-legal
+title: Aviso legal
+menu: aviso-legal
+layout: default
+---
+
+# **Aviso Legal**
+Esta Web es propiedad de EVENTOS Y CONVENCIONES MADAMA SL, con NIF/CIF B87684106, dirección Carretera M-501 km 28, 28609 – Villanueva de Perales, quien no puede asumir ninguna responsabilidad derivada del uso incorrecto, inapropiado o ilícito de la información aparecida en la misma.
+
+Con los límites establecidos en la ley, www.fincalaperlena.com no asume ninguna responsabilidad derivada de la falta de veracidad, integridad, actualización y precisión de los datos o informaciones que se contienen en sus páginas de Internet.
+
+Los contenidos e información no vinculan a www.fincalaperlena.com ni constituyen opiniones, consejos o asesoramiento legal de ningún tipo pues se trata meramente de un servicio ofrecido con carácter informativo y divulgativo.
+
+Las páginas de Internet de www.fincalaperlena.com pueden contener enlaces (links) a otras páginas de terceras partes que www.fincalaperlena.com no puede controlar. Por lo tanto, www.fincalaperlena.com no puede asumir responsabilidades por el contenido que pueda aparecer en páginas de terceros.
+
+Los textos, imágenes, sonidos, animaciones, software y el resto de contenidos incluidos en este website son propiedad exclusiva de www.fincalaperlena.com o sus licenciantes. Cualquier acto de transmisión, distribución, cesión, reproducción, almacenamiento o comunicación pública total o parcial, debe contar con el consentimiento expreso de www.fincalaperlena.com.
+
+Asimismo, para acceder a algunos de los servicios que www.fincalaperlena.com ofrece a través del website es posible que tenga que proporcionar algunos datos de carácter personal. En cumplimiento de lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal le informamos que, mediante la cumplimentación de los presentes formularios, sus datos personales quedarán incorporados y serán tratados en los ficheros de www.fincalaperlena.com con el fin de poderle prestar y ofrecer nuestros servicios así como para informarle de las mejoras del sitio Web. Asimismo, le informamos de la posibilidad de que ejerza los derechos de acceso, rectificación, cancelación y oposición de sus datos de carácter personal, manera gratuita mediante email a info@fincalaperalena.com o en la dirección Carretera M-501 km 28, 28609 – Villanueva de Perales.

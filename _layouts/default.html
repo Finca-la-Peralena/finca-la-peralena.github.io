@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+
+{% include head.html %}
+
+<body class="">
+	<div id="wrapper" class="clearfix">
+		<div id="preloader">
+			<div id="spinner">
+				<img src="{{'/assets/images/preloaders/1_dorado.gif' | relative_url }}" alt="">
+			</div>
+		</div>
+
+		<!-- Start main menu -->
+		{% include menu.html %}
+		<!-- End main menu -->
+
+		<!-- Start main-content -->
+		{{content}}
+		<!-- end main-content -->
+
+		{% include footer.html %}
+
+		<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+	</div>
+	<!-- end wrapper -->
+
+
+	<!-- Footer Scripts -->
+	<!-- JS | Custom script for all pages -->
+	<script src="{{'/assets/js/custom.js' | relative_url }}"></script>
+</body>
+</html>

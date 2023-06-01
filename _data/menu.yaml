@@ -1,0 +1,27 @@
+- title: Inicio
+  file: pages/index.html
+  slug: inicio
+
+- title: Bodas
+  file: pages/bodas.html
+  slug: bodas
+
+- title: Eventos
+  file: pages/eventos.html
+  slug: eventos
+
+- title: Nuestra finca
+  file: pages/finca.html
+  slug: finca
+
+- title: Menus
+  file: pages/menus.html
+  slug: menus
+
+- title: Contacto
+  file: pages/contacto.html
+  slug: contacto
+
+- title: Aviso legal
+  file: pages/aviso-legal.md
+  slug: aviso-legal
