@@ -23,5 +23,5 @@
   slug: contacto
 
 - title: Aviso legal
-  file: pages/aviso-legal.md
+  file: pages/aviso-legal.html
   slug: aviso-legal
