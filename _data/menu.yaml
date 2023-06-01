@@ -1,6 +1,6 @@
 - title: Inicio
   file: pages/index.html
-  slug: inicio
+  slug: home
 
 - title: Bodas
   file: pages/bodas.html

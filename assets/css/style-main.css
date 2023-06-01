@@ -1895,6 +1895,14 @@ section > .container-fluid {
 .header-nav.navbar-white .menuzord {
   background: transparent;
 }
+/* -------- Header Dark ---------- */
+.header-nav.navbar-dark {
+  background-color: rgba(0, 0, 0, 1);
+  border: medium none;
+}
+.header-nav.navbar-dark .menuzord {
+  background: transparent;
+}
 /* -------- Header Transparent ---------- */
 .header-nav.navbar-transparent .menuzord {
   background: transparent;
