@@ -124,6 +124,14 @@ layout: default
 										data-error-message="Por favor, introduce el mensaje"></textarea>
 								</div>
 								<div class="form-group">
+									<a href="#promoModal1" data-lightbox="inline">
+										<label for="form_name">Acepto autorización para ofrecerle productos y servicios relacionados con los contratados y fidelizarle como cliente.</label>
+									</a>
+									<input id="form_check" name="form_check" class="form-control" type="checkbox"
+										value="" />
+										
+								</div>
+								<div class="form-group">
 									<input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden"
 										value="" />
 									<button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5"
@@ -173,5 +181,41 @@ layout: default
 			</div>
 		</div>
 	</section>
+</div>
+
+<div class="col-md-12">
+
+	<!-- popup modal click trigger -->
+	<a href="#promoModal1" data-lightbox="inline" class="btn btn-default">Trigger Modal</a>
+
+	<!-- popup modal -->
+	<div id="promoModal1" class="modal-promo-box bg-img-cover mfp-hide" data-bg-img="http://placehold.it/1920x1277">
+		<h3 class="mt-0">Datos del responsable del tratamiento</h3>
+		<p>
+			Identidad: EVENTOS Y CONVENCIONES MADAMA SL - CIF/NIF: B87684106
+			Dirección postal: CTRA. M-501 KM 28 - 28609 VILLANUEVA DE PERALES.
+			
+			Teléfono: 669742002 - Correo electrónico: info@fincalaperalena.com
+		</p>
+		
+		<h3 class="mt-0">Tratamiento de datos</h3>
+		<p>
+			“En EVENTOS Y CONVENCIONES MADAMA SL tratamos la información que nos facilita con el fin de prestarles el servicio
+			solicitado y realizar su facturación. Los datos proporcionados se conservarán mientras se mantenga la relación comercial
+			o durante el tiempo necesario para cumplir con las obligaciones legales y atender las posibles responsabilidades que
+			pudieran derivar del cumplimiento de la finalidad para la que los datos fueron recabados. Los datos no se cederán a
+			terceros salvo en los casos en que exista una obligación legal. Usted tiene derecho a obtener información sobre si en
+			EVENTOS Y CONVENCIONES MADAMA SL estamos tratando sus datos personales, por lo que puede ejercer sus derechos de acceso,
+			rectificación, supresión y portabilidad de datos y oposición y limitación a su tratamiento ante EVENTOS Y CONVENCIONES
+			MADAMA SL , CTRA. M-501 KM 28 - 28609 VILLANUEVA DE PERALES o en la dirección de correo electrónico
+			info@fincalaperalena.com adjuntando copia de su DNI o documento equivalente. Asimismo, y especialmente si considera que
+			no ha obtenido satisfacción plena en el ejercicio de sus derechos, podrá presentar una reclamación ante la autoridad
+			nacional de control dirigiéndose a estos efectos a la Agencia Española de Protección de Datos, C/ Jorge Juan, 6 - 28001
+			Madrid.
+		</p>
+
+		<a href="#" class="button" onClick="$.magnificPopup.close(); return false;">Cerrar</a>
+	</div>
+
 </div>
 <!-- end main-content -->
