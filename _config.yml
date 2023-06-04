@@ -42,8 +42,6 @@ plugins:
 collections:
   menu:
     output: false
-  galeria:
-    output: false
 
 defaults:
   - scope:

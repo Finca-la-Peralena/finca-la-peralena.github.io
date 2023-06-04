@@ -7,21 +7,6 @@ layout: default
 
 <!-- Start main-content -->
 <div class="main-content">
-	<!-- Section: inner-header -->
-	<section class="inner-header divider parallax layer-overlay overlay-dark-5" 
-		data-stellar-background-ratio="0.5"
-		data-bg-img="http://placehold.it/1920x1284">
-		<div class="container pt-200 pb-50">
-			<!-- Section Content -->
-			<div class="section-content pt-100">
-				<div class="row">
-					<div class="col-md-12">
-						<h3 class="title text-white">Galería</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<!-- Section: Gallery  -->
 	<section id="gallery" class="bg-lighter">
@@ -33,18 +18,16 @@ layout: default
 						<!-- Portfolio Gallery Grid -->
 						<div id="grid" class="portfolio-gallery masonry grid-4 clearfix" data-lightbox="gallery">
 
-							{% for foto in site.data.galeria %}
+							{% for image in site.static_files %}
+							{% if image.path contains 'fotos/galeria' %}
 
 							<!-- Portfolio Item Start -->
 							<div class="portfolio-item">
-								<a href="{{'/assets/'| relative_url}}{{foto.path}}" data-lightbox="gallery-item" title="{{foto.title}}">
+								<a href="{{ image.path }}" data-lightbox="gallery-item">
 									<div class="thumb">
-										<img class="img-fullwidth photo" src="{{'/assets/'| relative_url}}{{foto.path}}"
+										<img class="img-fullwidth photo" src="{{ image.path }}"
 											alt="project">
 										<div class="overlay-shade"></div>
-										<div class="text-holder">
-											<div class="title text-center">{{foto.title}}</div>
-										</div>
 										<div class="icons-holder">
 											<div class="icons-holder-inner">
 												<div
@@ -56,8 +39,9 @@ layout: default
 									</div>
 								</a>
 							</div>
-							<!-- Portfolio Item End -->					
+							<!-- Portfolio Item End -->		
 
+							{% endif %}
 							{% endfor %}		
 
 						</div>
