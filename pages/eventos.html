@@ -41,21 +41,15 @@ layout: default
 				</div>
 				<div class="col-sm-12 col-md-7">
 					<div class="image-carousel">
+						{% for image in site.static_files %}
+						{% if image.path contains 'fotos/eventos' %}
 						<div class="item">
 							<div class="thumb">
-								<img src="http://placehold.it/1324x783" alt="">
+								<img object-fit="cover" src="{{ image.path }}" alt="">
 							</div>
 						</div>
-						<div class="item">
-							<div class="thumb">
-								<img src="http://placehold.it/1920x1277" alt="">
-							</div>
-						</div>
-						<div class="item">
-							<div class="thumb">
-								<img src="http://placehold.it/1920x1285" alt="">
-							</div>
-						</div>
+						{% endif %}
+						{% endfor %}
 					</div>
 				</div>
 			</div>
