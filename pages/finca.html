@@ -4,3 +4,67 @@ title: La Finca - Finca la Peraleña
 menu: finca
 layout: default
 ---
+
+<!-- Start main-content -->
+<div class="main-content">
+	<!-- Section: inner-header -->
+	<section class="inner-header divider parallax layer-overlay overlay-dark-5"
+		data-bg-img="http://placehold.it/1920x1284">
+		<div class="container pt-200 pb-50">
+			<!-- Section Content -->
+			<div class="section-content pt-100">
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="title text-white">Galería</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section: Gallery  -->
+	<section id="gallery" class="bg-lighter">
+		<div class="container-fluid p-0">
+			<div class="section-content">
+				<div class="row">
+					<div class="col-md-12">
+
+						<!-- Portfolio Gallery Grid -->
+						<div id="grid" class="portfolio-gallery masonry grid-4 clearfix" data-lightbox="gallery">
+
+							{% for foto in site.data.galeria %}
+
+							<!-- Portfolio Item Start -->
+							<div class="portfolio-item">
+								<a href="{{'/assets/'| relative_url}}{{foto.path}}" data-lightbox="gallery-item" title="{{foto.title}}">
+									<div class="thumb">
+										<img class="img-fullwidth photo" src="{{'/assets/'| relative_url}}{{foto.path}}"
+											alt="project">
+										<div class="overlay-shade"></div>
+										<div class="text-holder">
+											<div class="title text-center">{{foto.title}}</div>
+										</div>
+										<div class="icons-holder">
+											<div class="icons-holder-inner">
+												<div
+													class="social-icons icon-sm icon-dark icon-circled icon-theme-colored">
+													<i class="fa fa-search text-white"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<!-- Portfolio Item End -->					
+
+							{% endfor %}		
+
+						</div>
+						<!-- End Portfolio Gallery Grid -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- end main-content -->
