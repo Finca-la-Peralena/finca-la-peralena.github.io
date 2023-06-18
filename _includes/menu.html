@@ -12,7 +12,7 @@
 							{% for menu in site.data.menu %}
 
 							<li {% if page.menu==menu.slug %} class="active" {% endif %}><a
-									href="{% link {{menu.file}} %}">{{menu.title}}</a>
+									href="{{ menu.url | relative_url }}">{{menu.title}}</a>
 							</li>
 							{% endfor %}
 						</ul>

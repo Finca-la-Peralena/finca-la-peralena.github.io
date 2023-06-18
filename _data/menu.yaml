@@ -1,27 +1,27 @@
 - title: Inicio
-  file: pages/index.html
+  url: /
   slug: home
 
 - title: Bodas
-  file: pages/bodas.html
+  url: /bodas
   slug: bodas
 
 - title: Eventos
-  file: pages/eventos.html
+  url: /eventos
   slug: eventos
 
 - title: Nuestra finca
-  file: pages/finca.html
+  url: /finca
   slug: finca
 
 - title: Menus
-  file: pages/menus.html
+  url: /menus
   slug: menus
 
 - title: Contacto
-  file: pages/contacto.html
+  url: /contacto
   slug: contacto
 
 - title: Aviso legal
-  file: pages/aviso-legal.html
+  url: /aviso-legal
   slug: aviso-legal
