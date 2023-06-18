@@ -8,8 +8,7 @@ layout: default
 <!-- Start main-content -->
 <div class="main-content">
 	<!-- Section: inner-header -->
-	<section class="inner-header divider parallax layer-overlay overlay-dark-5" 
-		data-stellar-background-ratio="0.5"
+	<section class="inner-header divider parallax layer-overlay overlay-dark-5" data-stellar-background-ratio="0.5"
 		data-bg-img="{{'/assets/fotos/cabecera-contacto.webp' | relative_url}}">
 		<div class="container pt-120 pb-50">
 			<!-- Section Content -->
@@ -77,18 +76,18 @@ layout: default
 					<div class="col-sm-12 col-md-6">
 						<div class="contact-wrapper">
 							<h3 class="mt-100 mb-30">Enviar mensaje</h3>
-							<p class="mb-30">Si prefieres, puedes contactar con nosotros directamente rellenando el siguiente formulario.</p>
+							<p class="mb-30">Si prefieres, puedes contactar con nosotros directamente rellenando el
+								siguiente formulario.</p>
 
 							<!-- Contact Form -->
-							<form id="contact_form" name="contact_form" class="form-transparent"
-								action="includes/sendmail.php" method="post">
+							<form id="contact_form" name="contact_form" class="form-transparent" method="post">
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label for="form_name">Nombre</label>
 											<input id="form_name" name="form_name" class="form-control" type="text"
 												placeholder="Introduce tu nombre" required=""
-												data-error-message="Por favor, introduce tu nombre">
+												data-msg="Por favor, introduce tu nombre">
 										</div>
 									</div>
 									<div class="col-sm-6">
@@ -96,7 +95,7 @@ layout: default
 											<label for="form_email">Email</label>
 											<input id="form_email" name="form_email" class="form-control required email"
 												type="email" placeholder="Introduce tu email"
-												data-error-message="Por favor, introduce tu email">
+												data-msg="Por favor, introduce tu email">
 										</div>
 									</div>
 								</div>
@@ -106,15 +105,15 @@ layout: default
 											<label for="form_name">Asunto</label>
 											<input id="form_subject" name="form_subject" class="form-control required"
 												type="text" placeholder="Introduce el asunto"
-												data-error-message="Por favor, introduce el asunto">
+												data-msg="Por favor, introduce el asunto">
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label for="form_phone">Teléfono</label>
-											<input id="form_phone" name="form_phone" class="form-control required" type="text"
-												placeholder="Introduce tu teléfono"
-												data-error-message="Por favor, introduce tu teléfono">
+											<input id="form_phone" name="form_phone" class="form-control required"
+												type="text" placeholder="Introduce tu teléfono"
+												data-msg="Por favor, introduce tu teléfono">
 										</div>
 									</div>
 								</div>
@@ -122,14 +121,15 @@ layout: default
 									<label for="form_name">Mensaje</label>
 									<textarea id="form_message" name="form_message" class="form-control required"
 										rows="5" placeholder="Introduce el mensaje"
-										data-error-message="Por favor, introduce el mensaje"></textarea>
+										data-msg="Por favor, introduce el mensaje"></textarea>
 								</div>
 								<div class="checkbox">
 									<label>
 										<input id="form_check" name="form_check" type="checkbox" class="required"
-										data-error-message="Es obligatorio aceptar la autorización">
+											data-msg="Es obligatorio aceptar la autorización">
 										<a href="#promoModal1" data-lightbox="inline">
-											Acepto autorización para ofrecerle productos y servicios relacionados con los contratados y fidelizarle como cliente.
+											Acepto autorización para ofrecerle productos y servicios relacionados con
+											los contratados y fidelizarle como cliente.
 										</a>
 									</label>
 								</div>
@@ -168,14 +168,11 @@ layout: default
 							</script>
 						</div>
 					</div>
-					<div class="col-sm-12 col-md-6 bg-img-center bg-img-cover p-0" data-bg-img="http://placehold.it/1920x1277">
-						<iframe 
-							width="400" 
-							height="700" 
-							style="border:0" 
-							loading="lazy" 
-							allowfullscreen
-							referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3039.7057487751094!2d-4.107800796295162!3d40.371048438690224!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x278b4a5a300e2db0!2sFinca%20La%20Perale%C3%B1a!5e0!3m2!1ses!2ses!4v1611922519417!5m2!1ses!2ses">
+					<div class="col-sm-12 col-md-6 bg-img-center bg-img-cover p-0"
+						data-bg-img="http://placehold.it/1920x1277">
+						<iframe width="400" height="700" style="border:0" loading="lazy" allowfullscreen
+							referrerpolicy="no-referrer-when-downgrade"
+							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3039.7057487751094!2d-4.107800796295162!3d40.371048438690224!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x278b4a5a300e2db0!2sFinca%20La%20Perale%C3%B1a!5e0!3m2!1ses!2ses!4v1611922519417!5m2!1ses!2ses">
 						</iframe>
 					</div>
 
@@ -193,23 +190,33 @@ layout: default
 		<p>
 			Identidad: EVENTOS Y CONVENCIONES MADAMA SL - CIF/NIF: B87684106
 			Dirección postal: CTRA. M-501 KM 28 - 28609 VILLANUEVA DE PERALES.
-			
+
 			Teléfono: 669742002 - Correo electrónico: info@fincalaperalena.com
 		</p>
-		
+
 		<h3 class="mt-0">Tratamiento de datos</h3>
 		<p>
-			“En EVENTOS Y CONVENCIONES MADAMA SL tratamos la información que nos facilita con el fin de prestarles el servicio
-			solicitado y realizar su facturación. Los datos proporcionados se conservarán mientras se mantenga la relación comercial
-			o durante el tiempo necesario para cumplir con las obligaciones legales y atender las posibles responsabilidades que
-			pudieran derivar del cumplimiento de la finalidad para la que los datos fueron recabados. Los datos no se cederán a
-			terceros salvo en los casos en que exista una obligación legal. Usted tiene derecho a obtener información sobre si en
-			EVENTOS Y CONVENCIONES MADAMA SL estamos tratando sus datos personales, por lo que puede ejercer sus derechos de acceso,
-			rectificación, supresión y portabilidad de datos y oposición y limitación a su tratamiento ante EVENTOS Y CONVENCIONES
+			“En EVENTOS Y CONVENCIONES MADAMA SL tratamos la información que nos facilita con el fin de prestarles el
+			servicio
+			solicitado y realizar su facturación. Los datos proporcionados se conservarán mientras se mantenga la
+			relación comercial
+			o durante el tiempo necesario para cumplir con las obligaciones legales y atender las posibles
+			responsabilidades que
+			pudieran derivar del cumplimiento de la finalidad para la que los datos fueron recabados. Los datos no se
+			cederán a
+			terceros salvo en los casos en que exista una obligación legal. Usted tiene derecho a obtener información
+			sobre si en
+			EVENTOS Y CONVENCIONES MADAMA SL estamos tratando sus datos personales, por lo que puede ejercer sus
+			derechos de acceso,
+			rectificación, supresión y portabilidad de datos y oposición y limitación a su tratamiento ante EVENTOS Y
+			CONVENCIONES
 			MADAMA SL , CTRA. M-501 KM 28 - 28609 VILLANUEVA DE PERALES o en la dirección de correo electrónico
-			info@fincalaperalena.com adjuntando copia de su DNI o documento equivalente. Asimismo, y especialmente si considera que
-			no ha obtenido satisfacción plena en el ejercicio de sus derechos, podrá presentar una reclamación ante la autoridad
-			nacional de control dirigiéndose a estos efectos a la Agencia Española de Protección de Datos, C/ Jorge Juan, 6 - 28001
+			info@fincalaperalena.com adjuntando copia de su DNI o documento equivalente. Asimismo, y especialmente si
+			considera que
+			no ha obtenido satisfacción plena en el ejercicio de sus derechos, podrá presentar una reclamación ante la
+			autoridad
+			nacional de control dirigiéndose a estos efectos a la Agencia Española de Protección de Datos, C/ Jorge
+			Juan, 6 - 28001
 			Madrid.
 		</p>
 
