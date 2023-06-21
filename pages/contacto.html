@@ -82,7 +82,7 @@ layout: default
 								siguiente formulario.</p>
 
 							<!-- Contact Form -->
-							<form id="contact_form" name="contact_form" class="form-transparent" method="post">
+							<form id="contact_form" name="contact_form" class="form-transparent">
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
@@ -147,32 +147,40 @@ layout: default
 							</form>
 							<!-- Contact Form Validation-->
 							<script type="text/javascript">
-								$("#contact_form").validate({
-									submitHandler: function (form) {
-										var form_btn = $(form).find('button[type="submit"]');
-										var form_result_div = '#form-result';
-										$(form_result_div).remove();
-										form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-										var form_btn_old_msg = form_btn.html();
-										form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-										$(form).ajaxSubmit({
-											dataType: 'json',
-											success: function (data) {
-												if (data.status == 'true') {
-													$(form).find('.form-control').val('');
-												}
-												form_btn.prop('disabled', false).html(form_btn_old_msg);
-												$(form_result_div).html(data.message).fadeIn('slow');
-												setTimeout(function () { $(form_result_div).fadeOut('slow') }, 6000);
-											}
-										});
+								$("#contact_form").validate(
+									{
+										submitHandler: function (form) {
+											console.log(form);
+
+											const $form = $("#contact_form");
+
+											const phone = "6#7#5#4#9#3#0#2#1".replace(/#/g, '');
+
+											// get object i.e {key: 'value'} of form
+											let data = {}
+											$form.serializeArray().forEach(v => data[v.name] = v.value)
+
+											// make the ?text= payload, 
+											const text =
+												`Buenos días, he rellenado el formulario de contacto a través de vuestra página web:
+*Nombre*: ${data.form_name}
+*Email*: ${data.form_email}
+*Asunto*: ${data.form_subject}
+*Teléfono*: ${data.form_phone}
+*Mensaje*: ${data.form_message}
+`.replaceAll('	\n', ''); //usamos el replace all para eliminar las opciones vacias
+											// make the url
+											const action = "https://wa.me/" + phone + "?text=" + window.encodeURIComponent(text);
+											window.open(action);
+										}
+
 									}
-								});
+								);
+
 							</script>
 						</div>
 					</div>
-					<div class="col-sm-12 col-md-6 bg-img-center bg-img-cover p-0"
-						data-bg-img="http://placehold.it/1920x1277">
+					<div class="col-sm-12 col-md-6 bg-img-center bg-img-cover p-0">
 						<iframe width="400" height="700" style="border:0" loading="lazy" allowfullscreen
 							referrerpolicy="no-referrer-when-downgrade"
 							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3039.7057487751094!2d-4.107800796295162!3d40.371048438690224!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x278b4a5a300e2db0!2sFinca%20La%20Perale%C3%B1a!5e0!3m2!1ses!2ses!4v1611922519417!5m2!1ses!2ses">
