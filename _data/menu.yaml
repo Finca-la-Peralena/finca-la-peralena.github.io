@@ -14,9 +14,10 @@
   url: /finca
   slug: finca
 
-- title: Menus
-  url: /menus
-  slug: menus
+
+#- title: Menus
+#  url: /menus
+#  slug: menus
 
 - title: Contacto
   url: /contacto
