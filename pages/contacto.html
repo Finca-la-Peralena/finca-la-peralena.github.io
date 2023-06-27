@@ -154,7 +154,7 @@ layout: default
 
 											const $form = $("#contact_form");
 
-											const phone = "6#7#5#4#9#3#0#2#1".replace(/#/g, '');
+											const phone = "6#0#6#0#2#2#3#4#4".replace(/#/g, '');
 
 											// get object i.e {key: 'value'} of form
 											let data = {}
@@ -162,12 +162,11 @@ layout: default
 
 											// make the ?text= payload, 
 											const text =
-												`Buenos días, he rellenado el formulario de contacto a través de vuestra página web:
+												`${data.form_message}
 *Nombre*: ${data.form_name}
 *Email*: ${data.form_email}
 *Asunto*: ${data.form_subject}
 *Teléfono*: ${data.form_phone}
-*Mensaje*: ${data.form_message}
 `.replaceAll('	\n', ''); //usamos el replace all para eliminar las opciones vacias
 											// make the url
 											const action = "https://wa.me/" + phone + "?text=" + window.encodeURIComponent(text);
