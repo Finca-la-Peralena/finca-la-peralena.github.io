@@ -42,12 +42,57 @@ layout: default
 			<div class="section-content">
 				<div class="row">
 					<div class="col-md-12">
-
+						<h3 class="title text-black">Espacios</h3>
 						<!-- Portfolio Gallery Grid -->
 						<div class="portfolio-gallery masonry grid-4 gutter-30 clearfix" data-lightbox="gallery">
 
 							{% for image in site.static_files %}
-							{% if image.path contains 'fotos/finca' %}
+							{% if image.path contains 'fotos/finca/espacios' %}
+
+							<!-- Portfolio Item Start -->
+							<div class="portfolio-item">
+								<a href="{{ image.path }}" data-lightbox="gallery-item">
+									<div class="thumb">
+										<img class="img-fullwidth photo" src="{{ image.path }}"
+											alt="project">
+										<div class="overlay-shade"></div>
+										<div class="icons-holder">
+											<div class="icons-holder-inner">
+												<div
+													class="social-icons icon-sm icon-dark icon-circled icon-theme-colored">
+													<i class="fa fa-search text-white"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<!-- Portfolio Item End -->		
+
+							{% endif %}
+							{% endfor %}		
+
+						</div>
+						<!-- End Portfolio Gallery Grid -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section: Gallery  -->
+	<section>
+		<div class="container pt-0">
+
+			<div class="section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="title text-black">Bodas</h3>
+						<!-- Portfolio Gallery Grid -->
+						<div class="portfolio-gallery masonry grid-4 gutter-30 clearfix" data-lightbox="gallery">
+
+							{% for image in site.static_files %}
+							{% if image.path contains 'fotos/finca/bodas' %}
 
 							<!-- Portfolio Item Start -->
 							<div class="portfolio-item">
