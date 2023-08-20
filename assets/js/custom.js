@@ -242,7 +242,11 @@ var THEMEMASCOT = THEMEMASCOT || {};
                 responsive: true,
                 });
             } else {
-                $('.parallax').addClass("mobile-parallax");
+                // $('.parallax').addClass("mobile-parallax");
+				$.stellar({
+					horizontalScrolling: false,
+					responsive: true,
+				});
             }
         },
 
