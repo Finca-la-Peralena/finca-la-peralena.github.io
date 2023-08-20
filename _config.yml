@@ -38,20 +38,30 @@ port: 4000
 # Build settings
 theme: minima
 plugins:
-- jekyll-feed
-- jekyll-paginate
+  - jekyll-feed
+  - jekyll-paginate
 
 collections:
   menu:
     output: false
 
 defaults:
-- scope:
-    path: ""
-  values:
-    layout: "default"
-- scope:
-    path: ""
-    type: "posts"
-  values:
-    isPost: true
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      isPost: true
+
+  - scope:
+      path: "assets/fotos/finca/espacios"
+    values:
+      espacios: true
+
+  - scope:
+      path: "assets/fotos/finca/bodas"
+    values:
+      bodas: true

@@ -49,9 +49,8 @@ layout: default
 						<!-- Portfolio Gallery Grid -->
 						<div class="portfolio-gallery masonry grid-4 gutter-30 clearfix" data-lightbox="gallery">
 
-							{% for image in site.static_files %}
-							{% if image.path contains 'fotos/finca/espacios' %}
-
+							{% assign fotos_espacios = site.static_files | where: "espacios", true | sort: "basename" %}
+							{% for image in fotos_espacios %}
 							<!-- Portfolio Item Start -->
 							<div class="portfolio-item">
 								<a href="{{ image.path }}" data-lightbox="gallery-item">
@@ -70,8 +69,6 @@ layout: default
 								</a>
 							</div>
 							<!-- Portfolio Item End -->
-
-							{% endif %}
 							{% endfor %}
 
 						</div>
@@ -95,9 +92,8 @@ layout: default
 						<!-- Portfolio Gallery Grid -->
 						<div class="portfolio-gallery masonry grid-4 gutter-30 clearfix" data-lightbox="gallery">
 
-							{% for image in site.static_files %}
-							{% if image.path contains 'fotos/finca/bodas' %}
-
+							{% assign fotos_bodas = site.static_files | where: "bodas", true | sort: "basename" %}
+							{% for image in fotos_bodas %}
 							<!-- Portfolio Item Start -->
 							<div class="portfolio-item">
 								<a href="{{ image.path }}" data-lightbox="gallery-item">
@@ -116,8 +112,6 @@ layout: default
 								</a>
 							</div>
 							<!-- Portfolio Item End -->
-
-							{% endif %}
 							{% endfor %}
 
 						</div>
