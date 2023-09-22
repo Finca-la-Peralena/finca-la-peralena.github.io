@@ -1,12 +1,14 @@
 ---
 permalink: /contacto
-title: Contacto - Finca la Peraleña
+title: Solicita presupuesto de finca para bodas en Madrid
 menu: contacto
 layout: default
+image: assets/images/apple-touch-icon-144x144.png
 ---
 
 <!-- Start main-content -->
 <div class="main-content">
+	<h1 class="hide">Solicita tu presupuesto de finca para bodas en Madrid</h1>
 	<!-- Section: inner-header -->
 	<section class="inner-header divider parallax layer-overlay overlay-dark-5" data-stellar-background-ratio="0.5"
 		data-bg-img="{{'/assets/fotos/cabecera-contacto.webp' | relative_url}}">
@@ -15,7 +17,7 @@ layout: default
 			<div class="section-content pt-100">
 				<div class="row">
 					<div class="col-md-12">
-						<h3 class="title text-white">Contacto</h3>
+						<h2 class="title text-white">Contacto</h2>
 					</div>
 				</div>
 			</div>
@@ -79,7 +81,8 @@ layout: default
 						<div class="contact-wrapper">
 							<h3 class="mt-100 mb-30"><i class="fa-brands fa-whatsapp text-theme-colored"></i> Enviar
 								mensaje</h3>
-							<p class="mb-30">Si prefieres, puedes contactar con nosotros directamente por WhatsApp
+							<p class="mb-30">Si prefieres, puedes contactar con nosotros directamente por WhatsApp o
+								correo electrónico
 								rellenando el
 								siguiente formulario.</p>
 
@@ -124,7 +127,8 @@ layout: default
 								<div class="form-group">
 									<label for="form_name">Mensaje</label>
 									<textarea id="form_message" name="form_message" class="form-control required"
-										rows="5" placeholder="Introduce el mensaje"
+										rows="5"
+										placeholder="Introduce el mensaje. Los datos rellenados anteriormente se incluirán al final automáticamente."
 										data-msg="Por favor, introduce el mensaje"></textarea>
 								</div>
 								<div class="checkbox">
@@ -140,9 +144,14 @@ layout: default
 								<div class="form-group">
 									<input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden"
 										value="" />
-									<button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5"
+									<button id="whatsapp" type="submit"
+										class="btn btn-dark btn-theme-colored btn-flat mr-5"
 										data-loading-text="Por favor espera..."><i class="fa-brands fa-whatsapp"></i>
-										Enviar</button>
+										Enviar por WhatsApp</button>
+									<button id="email" type="submit"
+										class="btn btn-dark btn-theme-colored btn-flat mr-5"
+										data-loading-text="Por favor espera..."><i class="fa-regular fa-envelope"></i>
+										Enviar por Email</button>
 									<button type="reset"
 										class="btn btn-default btn-flat btn-theme-colored">Cancelar</button>
 								</div>
@@ -151,30 +160,48 @@ layout: default
 							<script type="text/javascript">
 								$("#contact_form").validate(
 									{
-										submitHandler: function (form) {
+										submitHandler: function (form, event) {
 											console.log(form);
+											console.log(event);
 
 											const $form = $("#contact_form");
-
-											const phone = "6#0#6#0#2#2#3#4#4".replace(/#/g, '');
 
 											// get object i.e {key: 'value'} of form
 											let data = {}
 											$form.serializeArray().forEach(v => data[v.name] = v.value)
 
-											// make the ?text= payload, 
-											const text =
-												`${data.form_message}
+											if (event.originalEvent.submitter.id === 'whatsapp') {
+
+												const phone = "6#0#6#0#2#2#3#4#4".replace(/#/g, '');
+
+												// make the ?text= payload, 
+												const text =
+													`${data.form_message}
 *Nombre*: ${data.form_name}
 *Email*: ${data.form_email}
 *Asunto*: ${data.form_subject}
 *Teléfono*: ${data.form_phone}
 `.replaceAll('	\n', ''); //usamos el replace all para eliminar las opciones vacias
-											// make the url
-											const action = "https://wa.me/" + phone + "?text=" + window.encodeURIComponent(text);
-											window.open(action);
-										}
+												// make the url
+												const action = "https://wa.me/" + phone + "?text=" + window.encodeURIComponent(text);
+												window.open(action);
+												return;
+											}
 
+											if (event.originalEvent.submitter.id === 'email') {
+
+												// make the ?text= payload, 
+												const text =
+													`${data.form_message}\n\nMis datos de contacto son:\nNombre: ${data.form_name}\nEmail: ${data.form_email}\nTeléfono: ${data.form_phone}`; //usamos el replace all para eliminar las opciones vacias
+
+												const bodyUrlEncoded = encodeURIComponent(text);
+
+												const mailto = `mailto:info@fincalaperalena.com?subject=${data.form_subject}&body=${bodyUrlEncoded}`;
+												window.open(mailto);
+											}
+
+											return;
+										}
 									}
 								);
 
@@ -200,7 +227,7 @@ layout: default
 	<div id="promoModal1" class="modal-promo-box bg-img-cover mfp-hide" data-bg-color="#FFF">
 		<h3 class="mt-0">Datos del responsable del tratamiento</h3>
 		<p>
-			Identidad: EVENTOS Y CONVENCIONES MADAMA SL - CIF/NIF: B87684106
+			Identidad: Alejandro García e hijas S.L. B44983287
 			Dirección postal: CTRA. M-501 KM 28 - 28609 VILLANUEVA DE PERALES.
 
 			Teléfono: 669742002 - Correo electrónico: info@fincalaperalena.com
@@ -208,7 +235,7 @@ layout: default
 
 		<h3 class="mt-0">Tratamiento de datos</h3>
 		<p>
-			“En EVENTOS Y CONVENCIONES MADAMA SL tratamos la información que nos facilita con el fin de prestarles el
+			“En Alejandro García e hijas S.L tratamos la información que nos facilita con el fin de prestarles el
 			servicio
 			solicitado y realizar su facturación. Los datos proporcionados se conservarán mientras se mantenga la
 			relación comercial
@@ -218,11 +245,10 @@ layout: default
 			cederán a
 			terceros salvo en los casos en que exista una obligación legal. Usted tiene derecho a obtener información
 			sobre si en
-			EVENTOS Y CONVENCIONES MADAMA SL estamos tratando sus datos personales, por lo que puede ejercer sus
+			Alejandro García e hijas S.L estamos tratando sus datos personales, por lo que puede ejercer sus
 			derechos de acceso,
-			rectificación, supresión y portabilidad de datos y oposición y limitación a su tratamiento ante EVENTOS Y
-			CONVENCIONES
-			MADAMA SL , CTRA. M-501 KM 28 - 28609 VILLANUEVA DE PERALES o en la dirección de correo electrónico
+			rectificación, supresión y portabilidad de datos y oposición y limitación a su tratamiento ante Alejandro
+			García e hijas S.L, CTRA. M-501 KM 28 - 28609 VILLANUEVA DE PERALES o en la dirección de correo electrónico
 			info@fincalaperalena.com adjuntando copia de su DNI o documento equivalente. Asimismo, y especialmente si
 			considera que
 			no ha obtenido satisfacción plena en el ejercicio de sus derechos, podrá presentar una reclamación ante la

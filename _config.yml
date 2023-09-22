@@ -18,51 +18,61 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Finca la Peraleña - Bodas y eventos en Madrid
+title: Finca La Peraleña
+tagline: Bodas, bautizos, comuniones y eventos en Madrid
 email: info@fincalaperalena.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Finca La Peraleña, finca para bodas y eventos ubicada en un entorno natural en Madrid, ofrece espacios naturales, gastronomía exclusiva y experiencia de más de dos décadas.
+  Finca de bodas, bautizos, comuniones y eventos en entorno natural en Madrid, espacios naturales, gastronomía exclusiva y más de dos décadas de experiencia.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://fincalaperalena.com" # the base hostname & protocol for your site, e.g. http://example.com
 basefolder: ""
 keywords: "Finca La Peraleña, Madrid, bodas, exclusivo, finca, eventos, bodas, comuniones, bautizos, celebraciones, eventos de empresa, finca de bodas en Madrid, Madrid, finca de bodas"
-author: "Finca La Peraleña"
+locale: es_ES
+logo: /assets/images/apple-touch-icon-72x72.png
+author:
+  name: Finca La Peraleña
+  type: LocalBusiness
+  telephone: 606022344
+  address: Carretera M-501 km 28, Villanueva de Perales 28609, (A 10 min. de Brunete), Madrid
 
 # Listing
 show_dir_listing: false
 
-# Localhost config
-host: 0.0.0.0
-port: 4000
-
 # Build settings
 theme: minima
 plugins:
-- jekyll-feed
-- jekyll-paginate
-- jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
 
 collections:
   menu:
     output: false
 
 defaults:
-- scope:
-    path: ""
-  values:
-    layout: "default"
-- scope:
-    path: ""
-    type: "posts"
-  values:
-    isPost: true
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      seo:
+        name: Finca La Peraleña
+        type: LocalBusiness
+        telephone: +34606022344
+        address: "Carretera M-501 km 28, Villanueva de Perales 28609, (A 10 min. de Brunete), Madrid"
 
-- scope:
-    path: "assets/fotos/finca/espacios"
-  values:
-    espacios: true
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      isPost: true
 
-- scope:
-    path: "assets/fotos/finca/bodas"
-  values:
-    bodas: true
+  - scope:
+      path: "assets/fotos/finca/espacios"
+    values:
+      espacios: true
+
+  - scope:
+      path: "assets/fotos/finca/bodas"
+    values:
+      bodas: true
