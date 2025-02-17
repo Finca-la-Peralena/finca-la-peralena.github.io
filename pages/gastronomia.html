@@ -1,0 +1,137 @@
+---
+permalink: /gastronomia
+title: Menú de Boda en Madrid
+menu: gastronomia
+layout: default
+image: /assets/fotos/cabecera-gastronomia.webp
+
+---
+
+<!-- Start main-content -->
+<div class="main-content">
+
+	<h1 class="hide">Menú de Boda en Madrid</h1>
+	<!-- Section: inner-header -->
+	<section class="inner-header divider parallax layer-overlay overlay-dark-5" data-stellar-background-ratio="0.5"
+		data-bg-img="{{'/assets/fotos/cabecera-gastronomia.webp' | relative_url}}">
+		<div class="container">
+			<!-- Section Content -->
+			<div class="section-content pt-100">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="title text-white">Gastronomía de Autor por Julio Reoyo</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-black">
+					<p class="text-justify">
+						En nuestra finca, nos enorgullece ofrecer un menú de boda en <strong>Madrid</strong> que combina
+						tradición y
+						vanguardia, diseñado por el
+						reconocido chef <strong>Julio Reoyo</strong>. Cada plato está elaborado con ingredientes de la
+						más alta calidad,
+						garantizando una
+						experiencia culinaria excepcional para vosotros y vuestros invitados.
+					</p>
+					<p class="text-justify">
+						Nuestros menús de boda están cuidadosamente elaborados para satisfacer una variedad de gustos y
+						preferencias. Cada elección refleja la creatividad y el compromiso de <strong>Julio
+							Reoyo</strong> con la excelencia gastronómica.
+					</p>
+					<p class="text-justify">
+						Entendemos que el <strong>presupuesto</strong> es una consideración importante. Por ello,
+						ofrecemos diferentes
+						opciones de menús de boda
+						con precios que se adaptan a vuestras necesidades, sin comprometer la calidad ni el sabor.
+					</p>
+
+					<p class="text-justify"></p>
+					Además, proporcionamos el protocolo y las minutas de boda personalizadas que complementan la decoración del evento,
+					ofreciendo a vuestros
+					invitados una visión detallada de cada plato que disfrutarán.
+					</p>
+
+					<p class="text-justify">
+						Al elegir nuestra finca para vuestra celebración, no solo seleccionáis un lugar, sino una
+						<strong>experiencia
+							gastronómica única</strong> que
+						hará de vuestra boda un <strong>evento inolvidable</strong>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section: Gallery  -->
+	<section>
+		<div class="container pt-0">
+
+			<div class="section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="separator font-great-vibes font-32">
+							<span class="text-black font-32">Nuestra gastronomía</span>
+						</div>
+						<!-- Portfolio Gallery Grid -->
+						<div class="portfolio-gallery masonry grid-4 gutter-30 clearfix" data-lightbox="gallery">
+
+							{% assign fotos_espacios = site.static_files | where: "gastronomia", true | sort: "basename"
+							%}
+							{% for image in fotos_espacios %}
+							<!-- Portfolio Item Start -->
+							<div class="portfolio-item">
+								<a href="{{ image.path }}" data-lightbox="gallery-item">
+									<div class="thumb">
+										<img class="img-fullwidth photo" src="{{ image.path }}"
+											alt="Espacio natural para bodas y eventos en Madrid"
+											title="Espacio natural para bodas y eventos en Madrid">
+										<div class="overlay-shade"></div>
+										<div class="icons-holder">
+											<div class="icons-holder-inner">
+												<div
+													class="social-icons icon-sm icon-dark icon-circled icon-theme-colored">
+													<i class="fa fa-search text-white"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<!-- Portfolio Item End -->
+							{% endfor %}
+
+						</div>
+						<!-- End Portfolio Gallery Grid -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section: Dossier  -->
+	<section>
+		<div class="container pt-0">
+
+			<div class="section-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="separator font-great-vibes font-32">
+							<span class="text-black font-32">Dosier 2025</span>
+						</div>
+						<iframe title="Dossier precios menu de boda 2025"
+							src="http://docs.google.com/gview?url=https://fincalaperalena.com/assets/Dossier_2025.pdf&embedded=true"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+</div>
+<!-- end main-content -->

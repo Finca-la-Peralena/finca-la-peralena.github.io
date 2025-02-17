@@ -14,3 +14,15 @@ theme. But don't modify style-main.css file.
 .sepia-0-5 {
 	filter: sepia(0.5)
 }
+
+iframe {
+	max-width: 100%;
+	/* Se ajusta al ancho del contenedor */
+	max-height: 500px;
+	/* Altura máxima */
+	width: 100%;
+	/* Asegura que el ancho inicial sea 100% */
+	height: auto;
+	/* Ajusta la altura automáticamente */
+	min-height: 500px;
+}

@@ -38,6 +38,7 @@ author:
 # Listing
 show_dir_listing: false
 
+
 # Build settings
 theme: minima
 plugins:
@@ -76,3 +77,8 @@ defaults:
       path: "assets/fotos/finca/bodas"
     values:
       bodas: true
+
+  - scope:
+      path: "assets/fotos/gastronomia"
+    values:
+      gastronomia: true
